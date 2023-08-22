@@ -11,7 +11,21 @@
 
 
 class MyList:
-    pass
+    def __init__(self, data):
+        self.data = data
+
+    def __repr__(self):
+        return f"{__class__.__name__}({self.data})"
+
+    def __str__(self):
+        return f"{self.data}"
+
+    def __len__(self):
+        return len(self.data)
+
+    def __add__(self, other):
+        res_list = self.data + other.data
+        return res_list
 
 
 my_list1 = MyList([1, 2, 3])
